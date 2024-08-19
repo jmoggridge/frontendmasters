@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>random dog</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        background-color: black;
+      }
+      #dog-btn {
+        width: 100vw;
+        height: 10rem;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(0, 0, 0);
+        color: rgb(152, 210, 255);
+        font-size: x-large;
+        font-weight: 900;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        font-style: normal;
+        font-variant: small-caps;
+        font-stretch: extra-expanded;
+        outline-color: rgb(86, 107, 244);
+      }
+      #dog-btn:hover {
+        color: rgb(255, 252, 50);
+        opacity: 80%;
+      }
+      #dog-btn:active {
+        opacity: 70%;
+        color: rgb(0, 255, 55);
+      }
+    </style>
+  </head>
+  <body class="body">
+    <button id="dog-btn">🐕🦮🐶🐕‍🦺🐾🦴 click here 🦴🐶🐩🐶🐩</button>
+    <div id="dog"></div>
+  </body>
+  <script>
+    function getDogPic() {
+      console.log('clicked');
+      fetch('https://dog.ceo/api/breeds/image/random')
+        .then(function (response) {
+          const text = response.text();
+          return text;
+        })
+        .then((text) => {
+          const obj = JSON.parse(text);
+          const img = document.createElement('img');
+          img.src = obj.message;
+          img.alt = 'This is your dog';
+          dog.prepend(img);
+        })
+        .catch((e) => console.error(e));
+    }
+
+    const dog = document.getElementById('dog');
+    document.getElementById('dog-btn').addEventListener('click', getDogPic);
+  </script>
+</html>

@@ -1,0 +1,75 @@
+html {
+  min-height: 100vh;
+}
+.calculator {
+  margin: auto;
+  justify-self: center;
+  border-color: gray;
+  border-width: 2px;
+  height: 500px;
+  width: 400px;
+  display: grid;
+  grid-template:
+    'display display display display'
+    'clear clear back op'
+    '7 8 9 h'
+    '4 5 6 l'
+    '1 2 3 p'
+    'z z z r';
+}
+.btn {
+  color: black;
+  margin: 0px;
+  font-size: xx-large;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: thin solid black;
+  line-height: 78px;
+}
+.btn:hover {
+  opacity: 95%;
+}
+.btn:active {
+  opacity: 80%;
+}
+
+.digit {
+  padding: auto;
+  background-color: lightgrey;
+  color: black;
+}
+.back {
+  padding: auto;
+  background-color: lightgrey;
+  color: black;
+}
+.display {
+  background-color: black;
+  text-align: right;
+  color: white;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  grid-area: display;
+  line-height: 80px;
+  height: 80px;
+  overflow-x: scroll;
+  font-size: xx-large;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.clear {
+  background-color: lightgrey;
+  grid-area: clear;
+}
+.operator {
+  background-color: lightcoral;
+  color: white;
+}
+.equals {
+  background-color: lightcoral;
+  color: white;
+}
+.z {
+  grid-area: z;
+}

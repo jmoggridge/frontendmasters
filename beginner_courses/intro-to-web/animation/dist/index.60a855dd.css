@@ -1,0 +1,23 @@
+html {
+  color: #fff;
+  background-color: #000;
+}
+
+body {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  display: flex;
+}
+
+.ball {
+  background-color: #3b8677;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: relative;
+}
+/*# sourceMappingURL=index.60a855dd.css.map */
