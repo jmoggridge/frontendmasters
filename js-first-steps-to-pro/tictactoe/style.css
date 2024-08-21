@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+#board {
+  margin: auto;
+  width: 400px;
+  border: 2px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  margin: 0;
+  padding: 0;
+  min-height: 40px;
+  min-width: 40px;
+  aspect-ratio: 1;
+  border: 2px solid red;
+  font-size: 200%;
+  line-height: 80%;
+  align-content: center;
+  text-align: center;
+}
