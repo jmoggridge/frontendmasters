@@ -66,10 +66,10 @@ function shuffle(array) {
 }
 
 function disable(button) {
-  button.disabled = true;
+  button.setAttribute('disabled', '');
 }
 function enable(button) {
-  button.disabled = false;
+  button.removeAttribute('disabled');
 }
 function isCorrect(guess) {
   return fact.answer == guess;
@@ -87,10 +87,7 @@ disable(nextButton);
 for (let button of optionButtons) {
   button.addEventListener('click', function onGuess(e) {
     e.preventDefault();
-    // 6bdisplay the fact's explanation by setting the text of the explanation element`;
     explanation.textContent = fact.explanation;
-
-    // 7 Use a for loop to disable all the option buttons`;
     for (let button of optionButtons) {
       disable(button);
     }
