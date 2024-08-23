@@ -1,11 +1,15 @@
 html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 header {
   margin: 1rem auto;
-  padding: 3rem;
+  padding-top: 3rem;
   width: 50%;
   margin: 1em auto;
 }
@@ -16,37 +20,68 @@ main {
   display: flex;
   flex-direction: column;
 }
+h1 {
+  transition-duration: 5000ms;
+}
+h1:hover {
+  color: rgb(240, 135, 135);
+}
 #statement {
-  border: 1px solid black;
+  border: 1px solid rgb(185, 185, 182);
   border-radius: 0.5rem;
   box-shadow: 5px 5px 5px gray;
   padding: 1rem;
   font-size: x-large;
   text-align: center;
-  margin: 1rem 0px;
+  margin: 2rem 0rem 1rem 0rem;
   min-height: 2em;
 }
 #explanation {
+  margin: 1rem 0rem;
+  border-radius: 10px;
   padding: 1rem;
   text-align: center;
 }
 #options {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
 }
 button {
-  padding: 0.5rem;
-  font-size: medium;
+  font-size: 1.25rem;
+  font-weight: 600;
   border-radius: 5px;
+  padding: 0.5rem;
+}
+.guess {
+  font-size: 1.5rem;
+  width: 45%;
+  margin: 0.5rem 0rem;
+  color: black;
+  background-color: lightgray;
+  transition: 500ms ease-in-out;
+}
+.guess:hover {
+  background-color: blue;
+  box-shadow: -0.51rem 0.21rem rgb(139, 210, 234, 20);
+  color: wheat;
+}
+.guess:disabled {
+  background-color: gray;
+  color: lightgray;
+  padding: 0.23rem 0.5rem;
+  box-shadow: none;
 }
 .correct {
-  background-color: lightgreen;
+  background-color: rgb(0, 104, 0);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 .incorrect {
-  background-color: lightpink;
+  background-color: rgb(149, 0, 22);
 }
-
 .over {
   margin: 0;
   padding: 0;
@@ -58,8 +93,21 @@ button {
   justify-items: center;
   align-self: center;
   text-align: center;
-  color: darkred;
+  color: rgb(198, 184, 184);
   font-size: xx-large;
   font-weight: 900;
   line-height: 100%;
+}
+
+#next {
+  background-color: rgb(90, 134, 255);
+
+  color: white;
+  padding: 0.5rem;
+  font-weight: 600;
+  margin: 1rem;
+  transition: 1000ms ease-in-out;
+}
+#next:disabled {
+  display: none;
 }

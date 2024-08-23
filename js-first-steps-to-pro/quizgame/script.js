@@ -84,6 +84,7 @@ const optionButtons = document.getElementById('options').children;
 const nextButton = document.querySelector('#next');
 disable(nextButton);
 
+// add event listeners to guess buttons
 for (let button of optionButtons) {
   button.addEventListener('click', function onGuess(e) {
     e.preventDefault();
@@ -101,8 +102,6 @@ for (let button of optionButtons) {
   });
 }
 
-console.log('optionButtons in script', optionButtons);
-
 nextButton.addEventListener('click', function (event) {
   event.preventDefault();
 
@@ -116,10 +115,20 @@ nextButton.addEventListener('click', function (event) {
   fact = facts.pop();
   statement.textContent = fact.statement;
   disable(nextButton);
-  console.log('next');
   console.log(`Questions left: ${facts.length}`);
 
   if (!facts.length) {
     document.body.innerHTML = '<div class="over"><i>GAME OVER</i></div>';
   }
+});
+
+//
+let h1 = document.getElementsByTagName('h1');
+h1 = h1[0];
+console.log(h1);
+h1.addEventListener('mouseover', function h1mouseover() {
+  h1.textContent = 'Test your skills';
+});
+h1.addEventListener('mouseout', function h1mouseover() {
+  h1.textContent = 'Quiz.js';
 });
