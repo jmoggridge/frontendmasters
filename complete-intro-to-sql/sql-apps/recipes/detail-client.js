@@ -51,10 +51,12 @@ function populateResult(results, templateFn) {
 async function init() {
   const results = await requestFromAPI();
   const photos = results.photos.filter((photo) => photo !== "default.jpg");
+  console.log("photos", photos);
 
   document.getElementById("swiper-ingredients").innerHTML =
     populateResult(photos, templateRow) +
     populateResult(results.ingredients, templateIngredients);
+
   document.getElementById("list").innerHTML = populateResult(
     results.ingredients,
     templateList
